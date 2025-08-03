@@ -1,0 +1,72 @@
+Elixir Syntax Practice Problems
+===============================
+
+🧩 Problem 1: FizzBuzz
+----------------------
+Write a function `fizzbuzz/1` that takes a number and returns:
+- "Fizz" if divisible by 3,
+- "Buzz" if divisible by 5,
+- "FizzBuzz" if divisible by both,
+- the number itself otherwise.
+
+Bonus: Write `fizzbuzz_range/1` that takes a number `n` and prints the fizzbuzz from 1 to `n`.
+
+Example:
+    fizzbuzz(3)      # => "Fizz"
+    fizzbuzz(5)      # => "Buzz"
+    fizzbuzz(15)     # => "FizzBuzz"
+    fizzbuzz(4)      # => 4
+
+
+🧩 Problem 2: List Analyzer
+---------------------------
+Write a module `Analyzer` with the following functions:
+
+- `count_evens/1`: counts how many even numbers are in a list
+- `sum_positive/1`: sums only positive numbers
+- `unique_sorted/1`: returns a deduplicated, sorted version of the list
+
+Example:
+    Analyzer.count_evens([1, 2, 3, 4])     # => 2
+    Analyzer.sum_positive([-1, 2, 3, -5])  # => 5
+    Analyzer.unique_sorted([4, 1, 2, 1])   # => [1, 2, 4]
+
+
+🧩 Problem 3: Recursive String Reverser
+---------------------------------------
+Write a function `reverse/1` that takes a string and returns its reverse without using built-in `String.reverse/1`.
+
+Use recursion and pattern matching on the string’s graphemes:
+
+Example:
+    reverse("hello")  # => "olleh"
+
+Hint: Use `String.graphemes/1` and pattern match a list.
+
+
+🧩 Problem 4: Map Formatter
+---------------------------
+Write a function `pretty_print_map/1` that takes a map and prints each key-value pair like:
+
+    name: Alice
+    age: 30
+
+Don’t assume the keys are atoms — use pattern matching with `{k, v}` and `IO.puts/1`.
+
+Example:
+    pretty_print_map(%{"name" => "Alice", "age" => 30})
+
+
+🧩 Problem 5: Word Frequency Counter
+------------------------------------
+Given a paragraph (string), count the frequency of each word.
+
+Requirements:
+- Convert to lowercase
+- Remove punctuation (use Regex)
+- Return a map of word => count
+
+Example:
+    count_words("The cat and the hat.") 
+    # => %{"the" => 2, "cat" => 1, "and" => 1, "hat" => 1}
+
