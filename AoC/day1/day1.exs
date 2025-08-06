@@ -1,7 +1,7 @@
 defmodule Day1 do
   # part 1
   def main() do
-    input = String.trim_trailing(File.read!("./day1.txt"))
+    input = File.read!("./day1.txt") |> String.trim_trailing()
 
     split_input = String.split(input, "\n")
 
